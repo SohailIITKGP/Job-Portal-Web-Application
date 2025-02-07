@@ -17,7 +17,7 @@ export default function Footer() {
         setLoading(true);
 
         try {
-            const res = await fetch('https://job-portal-web-application-five.vercel.app/api/contact', {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contact`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

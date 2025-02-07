@@ -17,7 +17,7 @@ export default function Register() {
         e.preventDefault();
         
         try {
-            const registerRes = await fetch('https://job-portal-web-application-five.vercel.app/api/auth/register', {
+            const registerRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/register`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ export default function Register() {
 
             if (registerRes.ok) {
                 // Auto login after registration
-                const loginRes = await fetch('/api/auth/login', {
+                const loginRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/login`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

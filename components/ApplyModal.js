@@ -33,7 +33,7 @@ export default function ApplyModal({ job, onClose }) {
         setLoading(true);
 
         try {
-            const res = await fetch('https://job-portal-web-application-five.vercel.app/api/applications/create', {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/applications/create`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
