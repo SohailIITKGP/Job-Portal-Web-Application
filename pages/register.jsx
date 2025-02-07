@@ -17,7 +17,7 @@ export default function Register() {
         e.preventDefault();
         
         try {
-            const registerRes = await fetch('/api/auth/register', {
+            const registerRes = await fetch('https://job-portal-web-application-five.vercel.app/api/auth/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

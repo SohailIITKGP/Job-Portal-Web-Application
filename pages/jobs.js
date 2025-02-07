@@ -14,7 +14,7 @@ export default function Jobs() {
 
     const fetchJobs = async () => {
         try {
-            const res = await fetch('/api/jobs');
+            const res = await fetch('https://job-portal-web-application-five.vercel.app/api/jobs');
             const data = await res.json();
             setJobs(data.jobs || []);
         } catch (error) {

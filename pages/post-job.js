@@ -30,7 +30,7 @@ export default function PostJob() {
         setLoading(true);
 
         try {
-            const res = await fetch('/api/jobs/create', {
+            const res = await fetch('https://job-portal-web-application-five.vercel.app/api/jobs/create', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
